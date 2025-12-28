@@ -1,5 +1,8 @@
 # Soft Laundry Delivery System - Business Requirements Documentation
 
+**Date:** December 29, 2025
+**Prepared by:** Faisal Aslam
+
 ## Table of Contents
 1. [System Overview](#system-overview)
 2. [User Types and Roles](#user-types-and-roles)
@@ -17,38 +20,38 @@
 
 ## System Overview
 
-**Soft Laundry** is a complete laundry service delivery platform designed to streamline the connection between customers and local laundromats. The system ensures customers receive convenient, reliable laundry services while providing laundromats and delivery drivers with powerful tools to manage their operations effectively.
+**Soft Laundry** is a platform that connects customers with local laundromats. It makes it easy for customers to get laundry services while giving laundromats and drivers the tools they need to run their business.
 
-### Business Value Proposition
+### What This System Does For Everyone
 
 **For Customers:**
-- Convenient access to nearby laundromats within their neighborhood
-- Multiple service options: pickup, delivery, or drop-off
-- Real-time order tracking and notifications
-- Flexible payment options
-- Scheduled subscription services for regular customers
+- Easy access to nearby laundromats in their area
+- Different service options: pickup, delivery, or drop-off
+- Track orders in real-time and get notifications
+- Pay however they want
+- Set up subscriptions for regular service
 
 **For Laundromats:**
-- Efficient order management and customer relationship tools
-- Automated pricing and billing calculations
-- Customer subscription management
-- Revenue tracking and analytics
-- Streamlined communication with drivers and customers
+- Tools to manage orders and customers
+- Automatic pricing and billing
+- Manage customer subscriptions
+- Track revenue and see analytics
+- Easy communication with drivers and customers
 
 **For Drivers:**
-- Easy order acceptance and management
-- Navigation tools for efficient deliveries
-- Receipt printing capabilities
-- Earnings tracking and payout management
+- Simple way to accept and manage orders
+- Navigation tools to help with deliveries
+- Can print receipts
+- Track earnings and manage payouts
 
-### Core Business Features
-- **Smart Location Matching**: Customers automatically see only laundromats within their service area (typically 2 miles)
-- **Flexible Service Options**: Three service types to meet different customer needs
-- **Order Tracking**: QR code system ensures accurate order tracking from pickup to delivery
-- **Automated Receipts**: Professional receipts printed on-site with all order details
-- **Instant Communication**: Real-time notifications keep all parties informed
-- **Multiple Payment Methods**: Credit card, online payment, or cash on delivery
-- **Subscription Services**: Automated scheduling for regular customers
+### Main Features
+- **Location Matching**: Customers only see laundromats in their area (usually within 2 miles)
+- **Different Service Types**: Three ways to get laundry done depending on what customers need
+- **Order Tracking**: QR code system tracks orders from pickup to delivery
+- **Receipt Printing**: Print professional receipts on-site with all the order details
+- **Real-time Updates**: Notifications keep everyone in the loop
+- **Payment Options**: Credit card, online payment, or cash on delivery
+- **Subscriptions**: Automatic scheduling for customers who use the service regularly
 
 ---
 
@@ -117,7 +120,7 @@
 
 ## Functional Requirements by User Type
 
-This section details all functional requirements organized by user type, specifying what each user can do within the system.
+This section breaks down what each type of user can do in the system.
 
 ---
 
@@ -989,29 +992,29 @@ This section details all functional requirements organized by user type, specify
 
 ## System Dashboard (Admin Panel)
 
-The System Dashboard provides administrators with a comprehensive overview of the entire platform's operations, enabling quick decision-making and efficient management.
+The admin dashboard gives administrators a complete view of everything happening on the platform so they can make quick decisions and manage things efficiently.
 
-### 1. Dashboard Home (Executive Summary)
+### 1. Dashboard Home (Summary)
 
-The dashboard home displays key business metrics at a glance, allowing administrators to quickly assess the health and activity of the platform.
+The dashboard shows the most important business numbers right away, so admins can quickly see how the platform is doing.
 
-#### 1.1. Key Performance Indicators
+#### 1.1. Key Numbers to Watch
 
 **Subscribed Clients**
-- Shows the total number of customers with active subscription plans
-- **Business Value:** Indicates customer retention and recurring revenue potential
+- Total number of customers with active subscriptions
+- **Why it matters:** Shows if customers are sticking around and how much recurring revenue we're getting
 
 **New Support Tickets**
-- Displays the total number of new support requests from customers, drivers, and laundromats
-- **Business Value:** Helps prioritize customer service needs and identify systemic issues
+- Number of new support requests from customers, drivers, and laundromats
+- **Why it matters:** Helps us figure out what customer service issues need attention and spot bigger problems
 
 **Pending Payment Requests**
-- Shows credit card payments awaiting approval
-- **Business Value:** Ensures timely payment processing and cash flow management
+- Credit card payments waiting for approval
+- **Why it matters:** Makes sure payments get processed on time and we manage cash flow properly
 
 **Unpaid Subscriptions**
-- Identifies subscriptions that haven't been paid in the current billing cycle
-- **Business Value:** Helps identify payment issues and maintain subscription revenue
+- Subscriptions that haven't been paid for this billing cycle
+- **Why it matters:** Helps us catch payment problems and keep subscription revenue coming in
 
 **Transfer Requests**
 - Displays payout requests from laundromats and drivers
@@ -2205,12 +2208,13 @@ The Soft Laundry Delivery System includes a comprehensive set of features design
 ## Document Information
 
 **Document Version**: 1.0
-**Last Updated**: 2024
+**Date**: December 29, 2025
+**Prepared by**: Faisal Aslam
 **System Name**: Soft Laundry Delivery System
 **Platform**: Web Dashboard + Mobile Applications (Android/iOS)
 **Purpose**: Business Requirements Documentation
 
 ---
 
-*This document outlines the complete business requirements and features of the Soft Laundry Delivery System. For implementation details or technical specifications, please refer to the development team.*
+*This document covers all the business requirements and features for the Soft Laundry Delivery System. If you need technical details or implementation specifics, talk to the development team.*
 
