@@ -12,7 +12,7 @@
 
 This document provides a comprehensive analysis comparing the Business Requirements Document (BRD) with the current system implementation. Features are categorized as:
 -  **COMPLETED** - Fully implemented and functional
--  **PARTIALLY IMPLEMENTED** - Some features exist but need completion/enhancement
+-  **NOT IMPLEMENTED** - Missing from current system (needs implementation from scratch)
 -  **NOT IMPLEMENTED** - Missing from current system
 -  **NEEDS VERIFICATION** - Implementation exists but needs testing/confirmation
 
@@ -24,9 +24,9 @@ This document provides a comprehensive analysis comparing the Business Requireme
 
 | Requirement | Status | Notes |
 |------------|--------|-------|
-| 1.1.1 Number of clients subscribed |  **PARTIAL** | Dashboard shows total users, but not specifically "subscribed clients" count |
+| 1.1.1 Number of clients subscribed |  **NOT IMPLEMENTED** | Dashboard shows total users, but not specifically "subscribed clients" count |
 | 1.1.2 Number of new tickets |  **COMPLETED** | Support ticket system exists (`complaints_list.php`, `admin_api/get_all_complaints.php`) |
-| 1.1.3 Number of new paid bill requests |  **PARTIAL** | Billing system exists (`billing.php`, `list_payout.php`) but may need dashboard integration |
+| 1.1.3 Number of new paid bill requests |  **NOT IMPLEMENTED** | Billing system exists (`billing.php`, `list_payout.php`) but may need dashboard integration |
 | 1.1.4 Number of unpaid subscriptions |  **NOT IMPLEMENTED** | Subscription tracking exists but unpaid count not on dashboard |
 | 1.1.5 Number of credit card income transfer requests |  **NOT IMPLEMENTED** | Payment system exists but specific transfer request tracking missing |
 
@@ -44,7 +44,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 |------------|--------|-------|
 | 2.1.1 List of laundromats |  **COMPLETED** | `laundromat_list.php` exists |
 | 2.1.1.1 Date added |  **NEEDS VERIFICATION** | Database has `created_at` field, need to check if displayed |
-| 2.1.1.2 Number of customers |  **PARTIAL** | Customer count exists but may need per-laundromat breakdown |
+| 2.1.1.2 Number of customers |  **NOT IMPLEMENTED** | Customer count exists but may need per-laundromat breakdown |
 | 2.1.1.3 Number of active laundromats |  **COMPLETED** | Status field exists in `tbl_laundromats` |
 | 2.1.1.4 Total number of completed orders |  **COMPLETED** | Order tracking exists, can be filtered by laundromat |
 | 2.1.1.5 City |  **COMPLETED** | Address fields include city |
@@ -58,12 +58,12 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 2.1.2.2 Address (St name, City, State, zip code, additional address detail) |  **COMPLETED** | Full address fields in database |
 | 2.1.2.3 Working hours |  **COMPLETED** | `working_hours` table exists |
 | 2.1.2.4 Pricing |  **COMPLETED** | Pricing system exists (`laundry_periods`, `delivery_pricing`) |
-| 2.1.2.5 Delay Rules |  **PARTIAL** | Delay rules mentioned in BRD but need to verify implementation |
+| 2.1.2.5 Delay Rules |  **NOT IMPLEMENTED** | Delay rules mentioned in BRD but need to verify implementation |
 | 2.1.2.6 Contact details |  **COMPLETED** | Contact info fields exist |
 | 2.1.2.7 Laundry Status and Zone |  **COMPLETED** | Status and zone assignment exists |
 | 2.1.2.8 Subscription type |  **COMPLETED** | `subscription_types` table exists |
 | 2.1.2.9 Laundry Temperature |  **COMPLETED** | Temperature field in orders |
-| 2.1.2.10 Detergents and wash Detail |  **PARTIAL** | Detergents field exists but may need enhancement |
+| 2.1.2.10 Detergents and wash Detail |  **NOT IMPLEMENTED** | Detergents field exists but may need enhancement |
 | 2.1.2.11 Laundromat Rating |  **COMPLETED** | `tbl_laundury_rating` table exists |
 | 2.1.2.12 Order Page Button |  **COMPLETED** | Order management exists |
 | 2.1.2.13 Customer Page Button |  **COMPLETED** | Customer management exists |
@@ -87,12 +87,12 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 2.1.3.4.2 Delivery Price |  **COMPLETED** | `delivery_pricing` table |
 | 2.1.3.4.2.1 Select From system DDL |  **COMPLETED** | |
 | 2.1.3.4.2.2 Add Manually |  **COMPLETED** | |
-| 2.1.3.5 Delay Rules and Fees |  **PARTIAL** | Need to verify delay rules implementation |
-| 2.1.3.5.1 Maximum day of delay and rules (Text) |  **PARTIAL** | |
-| 2.1.3.5.2 Delay Charges fees (Number field) |  **PARTIAL** | |
+| 2.1.3.5 Delay Rules and Fees |  **NOT IMPLEMENTED** | Need to verify delay rules implementation |
+| 2.1.3.5.1 Maximum day of delay and rules (Text) |  **NOT IMPLEMENTED** | |
+| 2.1.3.5.2 Delay Charges fees (Number field) |  **NOT IMPLEMENTED** | |
 | 2.1.3.6 Contact details |  **COMPLETED** | |
 | 2.1.3.6.1 (Name, position, email, phone No) |  **COMPLETED** | |
-| 2.1.3.6.2 Preferred contact way (DDL select) |  **PARTIAL** | May need to verify |
+| 2.1.3.6.2 Preferred contact way (DDL select) |  **NOT IMPLEMENTED** | May need to verify |
 | 2.1.3.7 Laundry Status (active, not active, pending) |  **COMPLETED** | |
 | 2.1.3.8 Subscription type (dropdown from System Settings) |  **COMPLETED** | |
 | 2.1.3.9 Laundry Temperature (DDL select) |  **COMPLETED** | |
@@ -137,7 +137,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 2.1.7.2.2 Customer phone number |  **COMPLETED** | |
 | 2.1.7.2.3 Customer email |  **COMPLETED** | |
 | 2.1.7.2.4 Address |  **COMPLETED** | |
-| 2.1.7.3 Remove customer from laundromat |  **PARTIAL** | Need to verify soft delete functionality |
+| 2.1.7.3 Remove customer from laundromat |  **NOT IMPLEMENTED** | Need to verify soft delete functionality |
 
 ---
 
@@ -181,10 +181,10 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 4.1.2.2 Type (pickup or pickup and delivery) |  **COMPLETED** | |
 | 4.1.2.3 Contact details (Phone and Email) |  **COMPLETED** | |
 | 4.1.2.4 Upload (front & back) |  **COMPLETED** | Document upload exists |
-| 4.1.2.5 Check Conditions |  **PARTIAL** | Conditions may be manual, need automation |
-| 4.1.2.5.1 Driver older than 20 years |  **PARTIAL** | Age validation may exist but needs verification |
+| 4.1.2.5 Check Conditions |  **NOT IMPLEMENTED** | Conditions may be manual, need automation |
+| 4.1.2.5.1 Driver older than 20 years |  **NOT IMPLEMENTED** | Age validation may exist but needs verification |
 | 4.1.2.5.2 Driver can lift up 40 Lb weight |  **NOT IMPLEMENTED** | No automated check |
-| 4.1.2.5.3 Driver has a vehicle and insured |  **PARTIAL** | May be manual verification |
+| 4.1.2.5.3 Driver has a vehicle and insured |  **NOT IMPLEMENTED** | May be manual verification |
 | 4.1.2.6 Bank Account detail |  **COMPLETED** | Bank details field exists |
 | 4.1.2.7 Address |  **COMPLETED** | |
 | 4.1.2.8 Language |  **COMPLETED** | |
@@ -216,7 +216,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 5.1.1.1 Customer name |  **COMPLETED** | |
 | 5.1.1.2 Subscription type (weekly, bi-weekly) |  **COMPLETED** | `laundry_subscriptions` table |
 | 5.1.1.3 Laundry day and time |  **COMPLETED** | |
-| 5.1.1.4 Next pickup date |  **PARTIAL** | Calculation may need verification |
+| 5.1.1.4 Next pickup date |  **NOT IMPLEMENTED** | Calculation may need verification |
 | 5.1.1.5 Schedule action (Notification/auto schedule) |  **COMPLETED** | `action` field exists |
 | 5.1.1.6 Associated laundromat |  **COMPLETED** | |
 | 5.1.2 Add new subscription |  **COMPLETED** | `add_subscription.php` |
@@ -238,8 +238,8 @@ This document provides a comprehensive analysis comparing the Business Requireme
 
 | Requirement | Status | Notes |
 |------------|--------|-------|
-| 6.1.1 Filter by Zip Code |  **PARTIAL** | Order filtering exists but zip code filter needs verification |
-| 6.1.2 Filter by Address |  **PARTIAL** | |
+| 6.1.1 Filter by Zip Code |  **NOT IMPLEMENTED** | Order filtering exists but zip code filter needs verification |
+| 6.1.2 Filter by Address |  **NOT IMPLEMENTED** | |
 | 6.1.3 Filter by Customer Name |  **COMPLETED** | Search functionality exists |
 | 6.1.4 Filter by Laundromat |  **COMPLETED** | |
 | 6.1.5 Filter by Order Status |  **COMPLETED** | |
@@ -270,7 +270,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 6.3.1.6 Laundry Period |  **COMPLETED** | |
 | 6.3.1.7 Laundry type (pickup/dropoff/delivery) |  **COMPLETED** | |
 | 6.3.1.8 Laundry Temperature |  **COMPLETED** | |
-| 6.3.1.9 Customer Language |  **PARTIAL** | Language field may exist but needs verification |
+| 6.3.1.9 Customer Language |  **NOT IMPLEMENTED** | Language field may exist but needs verification |
 | 6.3.1.10 Order Status |  **COMPLETED** | |
 | 6.3.1.11 Driver Assigned |  **COMPLETED** | |
 | 6.3.1.12 Order Price (laundry & Delivery, Driver cut) |  **COMPLETED** | Pricing calculation exists |
@@ -292,13 +292,13 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 6.4.4 Mark as Picked Up |  **COMPLETED** | Order status management |
 | 6.4.5 Mark as Delivered |  **COMPLETED** | |
 | 6.4.6 Mark as Completed |  **COMPLETED** | |
-| 6.4.7 Send Delivery Code by SMS |  **PARTIAL** | SMS system exists but delivery code SMS needs verification |
+| 6.4.7 Send Delivery Code by SMS |  **NOT IMPLEMENTED** | SMS system exists but delivery code SMS needs verification |
 
 ### 6.5 Order Statistics and Reports
 
 | Requirement | Status | Notes |
 |------------|--------|-------|
-| 6.5.1 Number of Orders by Area |  **PARTIAL** | Can be calculated but dedicated report may be missing |
+| 6.5.1 Number of Orders by Area |  **NOT IMPLEMENTED** | Can be calculated but dedicated report may be missing |
 | 6.5.2 Number of Orders by Date Range |  **COMPLETED** | Filtering exists |
 | 6.5.3 Number of Orders by Laundromat |  **COMPLETED** | |
 | 6.5.4 Number of Orders by Status |  **COMPLETED** | |
@@ -312,9 +312,9 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 6.6.1.1 Customer name |  **COMPLETED** | |
 | 6.6.1.2 Phone number |  **COMPLETED** | |
 | 6.6.1.3 Email |  **COMPLETED** | |
-| 6.6.1.4 Number of associated laundromats |  **PARTIAL** | Relationship exists but count display needs verification |
+| 6.6.1.4 Number of associated laundromats |  **NOT IMPLEMENTED** | Relationship exists but count display needs verification |
 | 6.6.1.5 Associated laundromat(s) details |  **COMPLETED** | |
-| 6.6.1.6 Number of scheduled Laundry |  **PARTIAL** | Can be calculated |
+| 6.6.1.6 Number of scheduled Laundry |  **NOT IMPLEMENTED** | Can be calculated |
 | 6.6.2 Add new customer |  **COMPLETED** | `add_customer.php` |
 | 6.6.2.1 Name |  **COMPLETED** | |
 | 6.6.2.2 Phone number |  **COMPLETED** | |
@@ -322,7 +322,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 6.6.2.4 Address (Include Floor and Elevator info) |  **COMPLETED** | Floor and elevator fields exist |
 | 6.6.3 View customer details |  **COMPLETED** | `view_customer.php` |
 | 6.6.3.1-6.6.3.8 All fields |  **COMPLETED** | All customer details viewable |
-| 6.6.3.8 App Language |  **PARTIAL** | Language preference may exist but needs verification |
+| 6.6.3.8 App Language |  **NOT IMPLEMENTED** | Language preference may exist but needs verification |
 
 ---
 
@@ -360,7 +360,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 7.2.2.1 View chat history |  **COMPLETED** | |
 | 7.2.2.2 Add text message |  **COMPLETED** | |
 | 7.2.2.3 Upload image |  **COMPLETED** | |
-| 7.2.2.4 Upload video |  **PARTIAL** | Video upload may need verification |
+| 7.2.2.4 Upload video |  **NOT IMPLEMENTED** | Video upload may need verification |
 | 7.2.2.5 Send link |  **COMPLETED** | |
 | 7.2.2.6 Send notification |  **COMPLETED** | |
 | 7.2.2.7-7.2.2.10 All details |  **COMPLETED** | |
@@ -435,7 +435,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 
 | Requirement | Status | Notes |
 |------------|--------|-------|
-| 8.7.1 View New Customer URL |  **PARTIAL** | `customer_url_page.php` exists but needs verification |
+| 8.7.1 View New Customer URL |  **NOT IMPLEMENTED** | `customer_url_page.php` exists but needs verification |
 
 ### 8.8 Zones
 
@@ -479,7 +479,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | 10.1.4 Completed Orders |  **COMPLETED** | |
 | 10.1.5 Canceled Orders |  **COMPLETED** | |
 | 10.1.6 Total Revenue |  **COMPLETED** | Revenue tracking exists |
-| 10.1.7 Average Order Rating |  **PARTIAL** | Rating system exists but average calculation needs verification |
+| 10.1.7 Average Order Rating |  **NOT IMPLEMENTED** | Rating system exists but average calculation needs verification |
 
 ### 10.2 Order Management
 
@@ -494,13 +494,13 @@ This document provides a comprehensive analysis comparing the Business Requireme
 
 | Requirement | Status | Notes |
 |------------|--------|-------|
-| 10.3.1 Summary Section |  **PARTIAL** | Subscription data exists but summary view needs verification |
-| 10.3.1.1 Total Number of Subscribed Customers |  **PARTIAL** | |
+| 10.3.1 Summary Section |  **NOT IMPLEMENTED** | Subscription data exists but summary view needs verification |
+| 10.3.1.1 Total Number of Subscribed Customers |  **NOT IMPLEMENTED** | |
 | 10.3.1.2 Total Number of Orders |  **COMPLETED** | |
-| 10.3.1.3 Current Month Orders |  **PARTIAL** | Can be filtered but dedicated view needs verification |
-| 10.3.2 Customer Subscription List |  **PARTIAL** | Privacy-focused view with initials needs implementation |
+| 10.3.1.3 Current Month Orders |  **NOT IMPLEMENTED** | Can be filtered but dedicated view needs verification |
+| 10.3.2 Customer Subscription List |  **NOT IMPLEMENTED** | Privacy-focused view with initials needs implementation |
 | 10.3.2.1 Customer Initials |  **NOT IMPLEMENTED** | Should show initials only, not full names |
-| 10.3.2.2 Order Frequency |  **PARTIAL** | Can be calculated |
+| 10.3.2.2 Order Frequency |  **NOT IMPLEMENTED** | Can be calculated |
 | 10.3.2.3 Next Scheduled Order |  **COMPLETED** | Subscription system tracks this |
 
 ### 10.4 Billing & Payment
@@ -554,10 +554,10 @@ This document provides a comprehensive analysis comparing the Business Requireme
 
 | Requirement | Status | Notes |
 |------------|--------|-------|
-| Request delivery after dropoff |  **PARTIAL** | Dropoff order creation exists but "request delivery later" flow needs verification |
+| Request delivery after dropoff |  **NOT IMPLEMENTED** | Dropoff order creation exists but "request delivery later" flow needs verification |
 | Upload receipt number |  **NOT IMPLEMENTED** | **GAP** - Receipt upload for delivery request not found |
 | Attach picture of receipt |  **NOT IMPLEMENTED** | **GAP** - Receipt image upload not found |
-| Laundromat verification |  **PARTIAL** | Order verification exists but specific to receipt upload needs implementation |
+| Laundromat verification |  **NOT IMPLEMENTED** | Order verification exists but specific to receipt upload needs implementation |
 | Weight and cost update |  **COMPLETED** | |
 | Payment notification |  **COMPLETED** | |
 | Driver notification |  **COMPLETED** | |
@@ -569,14 +569,14 @@ This document provides a comprehensive analysis comparing the Business Requireme
 |------------|--------|-------|
 | Laundromat initiates delivery |  **COMPLETED** | Vendor app can create orders |
 | Customer registration by staff |  **COMPLETED** | |
-| 4-Digit Code Verification |  **PARTIAL** | SMS OTP exists but 4-digit code specifically needs verification |
+| 4-Digit Code Verification |  **NOT IMPLEMENTED** | SMS OTP exists but 4-digit code specifically needs verification |
 | Self-Registration via QR |  **COMPLETED** | QR registration exists |
-| SMS with link and app download |  **PARTIAL** | SMS system exists but link format needs verification |
+| SMS with link and app download |  **NOT IMPLEMENTED** | SMS system exists but link format needs verification |
 | Add laundry weight |  **COMPLETED** | |
 | Automatic bag categorization |  **COMPLETED** | Weight-based bag calculation exists |
 | Price calculation |  **COMPLETED** | |
 | Payment options |  **COMPLETED** | |
-| SMS with order details |  **PARTIAL** | Notification system exists but SMS format needs verification |
+| SMS with order details |  **NOT IMPLEMENTED** | Notification system exists but SMS format needs verification |
 | Order tracking via app |  **COMPLETED** | |
 | QR code delivery confirmation |  **COMPLETED** | |
 
@@ -600,7 +600,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | QR code in database |  **COMPLETED** | `order_q_id` and `delivery_code` fields |
 | QR code scanning |  **COMPLETED** | Scanner in rider app and customer app |
 | Thermal printer integration |  **NOT IMPLEMENTED** | **CRITICAL GAP** - No thermal printer API/functionality |
-| Receipt printing |  **PARTIAL** | Receipt generation exists (PDF) but thermal printing missing |
+| Receipt printing |  **NOT IMPLEMENTED** | Receipt generation exists (PDF) but thermal printing missing |
 
 ### 12.3 Payment Options
 
@@ -609,7 +609,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
 | App payment gateways |  **COMPLETED** | Multiple gateways: Razorpay, Stripe, PayPal, etc. |
 | Cash on delivery |  **COMPLETED** | COD option exists |
 | Payment status tracking |  **COMPLETED** | `payment_status` field |
-| Cash collection tracking |  **PARTIAL** | `amount_collected` field exists but submission to company needs verification |
+| Cash collection tracking |  **NOT IMPLEMENTED** | `amount_collected` field exists but submission to company needs verification |
 
 ### 12.4 Driver and Laundromat Coordination
 
@@ -646,7 +646,7 @@ This document provides a comprehensive analysis comparing the Business Requireme
    - Full name privacy protection not implemented
    - **Impact:** Privacy requirement
 
-###  MEDIUM PRIORITY - PARTIALLY IMPLEMENTED
+###  MEDIUM PRIORITY - NOT IMPLEMENTED
 
 1. **Dashboard Summary Metrics**
    - Subscribed clients count
@@ -736,7 +736,7 @@ The system is **approximately 85% complete** with most core functionalities impl
 3. **Language analytics** (reporting requirement)
 4. **Privacy view for customers** (compliance requirement)
 
-Most other features are either fully implemented or partially implemented with minor enhancements needed. The system architecture is solid and can support the missing features with appropriate development effort.
+Most other features are either fully implemented or need to be implemented from scratch. The system architecture is solid and can support the missing features with appropriate development effort.
 
 ---
 
